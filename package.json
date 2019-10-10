@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "browserify-fs": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
