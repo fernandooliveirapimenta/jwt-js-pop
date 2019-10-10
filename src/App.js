@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+var jwt = require('jsonwebtoken');
 
 function App() {
+
+   const token =  jwt.sign({
+        data: 'foobar',
+        cpf: '437437728-09'
+    }, '42035255', { expiresIn: 900000 });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        ola
+        <div style={{marginTop : '50px'}}>
+
+            {token}
+        </div>
     </div>
   );
 }
